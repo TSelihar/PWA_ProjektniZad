@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unos vijesti</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="validacija.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Unos nove vijesti</h1>
+        <nav>
+            <ul>
+                <li><a href="index.php">Početna</a></li>
+                <li><a href="unos.html">Unos vijesti</a></li>
+                <li><a href="kategorija.php">Kategorije</a></li>
+                <li><a href="administrator.php">Administracija</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form id="vijestForma" action="skripta.php" method="post" enctype="multipart/form-data">
+            <label for="naslov">Naslov:</label>
+            <input type="text" id="naslov" name="naslov" required><br>
+            <label for="kratki_sadrzaj">Kratki sadržaj:</label>
+            <textarea id="kratki_sadrzaj" name="kratki_sadrzaj" required></textarea><br>
+            <label for="sadrzaj">Sadržaj:</label>
+            <textarea id="sadrzaj" name="sadrzaj" required></textarea><br>
+            <label for="slika">Slika:</label>
+            <input type="file" id="slika" name="slika" required><br>
+            <label for="kategorija">Kategorija:</label>
+            <select id="kategorija" name="kategorija" required>
+                <option value="sport">Sport</option>
+                <option value="kultura">Kultura</option>
+                <option value="politika">Politika</option>
+                <option value="zabava">Zabava</option>
+            </select><br>
+            <input type="submit" value="Pošalji">
+        </form>
+    </main>
+    <footer>
+        <p>Autor: Vaše Ime i Prezime | Kontakt: email@example.com | Godina: 2024</p>
+    </footer>
+</body>
+</html>
